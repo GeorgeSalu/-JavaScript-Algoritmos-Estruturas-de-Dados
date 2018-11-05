@@ -36,3 +36,13 @@ function Stack() {
         console.log(items.toString());
     }
 }
+
+var pilha = new Stack();
+
+pilha.push(2)
+pilha.push(4)
+pilha.push(7)
+pilha.push(8)
+
+
+pilha.print();
