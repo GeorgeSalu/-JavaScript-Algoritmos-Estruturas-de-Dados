@@ -57,7 +57,18 @@ numbers.shift(); //remove -1
 
 //inserindo elemento em uma posição especifica
 numbers.splice(3, 3)
-console.log(numbers)
+//console.log(numbers)
 
 numbers.splice(3, 0, 3, 4, 5)
-console.log(numbers)
+//console.log(numbers)
+
+//Arrays bidimensionais
+var avgTempWeek = []
+
+var avgTemoWeek1 = [33, 25.2, 19, 27, 23.4, 41.6, 25]
+var avgTemoWeek2 = [41, 29, 33, 21.2, 19.3, 17, 33.8]
+
+avgTempWeek[0] = avgTemoWeek1
+avgTempWeek[1] = avgTemoWeek2
+
+console.log(avgTempWeek[0][4])
