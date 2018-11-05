@@ -42,4 +42,10 @@ numbers.unshift(-2)
 numbers.unshift(-3)
 numbers.unshift(-4)
 
+// removendo elementos
+numbers.pop(); // remove 16
+numbers.pop(); // remove 15
+
+numbers.shift();
+
 console.log(numbers)
