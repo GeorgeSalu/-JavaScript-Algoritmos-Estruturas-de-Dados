@@ -71,4 +71,9 @@ var avgTemoWeek2 = [41, 29, 33, 21.2, 19.3, 17, 33.8]
 avgTempWeek[0] = avgTemoWeek1
 avgTempWeek[1] = avgTemoWeek2
 
-console.log(avgTempWeek[0][4])
+//console.log(avgTempWeek[0][4])
+for (var i = 0; i < avgTempWeek.length; i++) {
+    for (var j = 0; j < avgTempWeek[i].length; j++) {
+        console.log(avgTempWeek[i][j])
+    }
+}
