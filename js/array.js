@@ -7,3 +7,8 @@ avgTemp[3] = 38
 avgTemp[4] = 25.5
 
 console.log(avgTemp[0])
+
+
+var daysOfWeek = new Array('Sunday', 'Monday', 'Yuesday', 'Wednesday', 'Trusday', 'Friday', 'Saturday');
+
+console.log(daysOfWeek[3])
