@@ -63,7 +63,11 @@ numbers.splice(3, 0, 3, 4, 5)
 //console.log(numbers)
 
 //Arrays bidimensionais
+var month = []
 var avgTempWeek = []
+
+var firstWeeks = []
+var lastWeeks = []
 
 var avgTemoWeek1 = [33, 25.2, 19, 27, 23.4, 41.6, 25]
 var avgTemoWeek2 = [41, 29, 33, 21.2, 19.3, 17, 33.8]
@@ -75,5 +79,23 @@ avgTempWeek[1] = avgTemoWeek2
 for (var i = 0; i < avgTempWeek.length; i++) {
     for (var j = 0; j < avgTempWeek[i].length; j++) {
         console.log(avgTempWeek[i][j])
+    }
+}
+
+//array tridimensional
+var avgTemoWeek3 = [13, 45.2, 19, 27, 23.4, 41.6, 25]
+var avgTemoWeek4 = [41, 29, 33, 21.2, 19.3, 17, 33.8]
+
+firstWeeks = [avgTemoWeek1, avgTemoWeek2];
+lastWeeks = [avgTemoWeek3, avgTemoWeek4];
+
+month = [firstWeeks, lastWeeks]
+
+console.log('array tridimensional')
+for (var x = 0; x < month.length; x++) {
+    for (var y = 0; y < month[x].length; y++) {
+        for (var z = 0; z < month[x][y].length; z++) {
+            console.log(month[x][y][z]);
+        }
     }
 }
