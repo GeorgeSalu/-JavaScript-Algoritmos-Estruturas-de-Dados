@@ -31,3 +31,11 @@ function Queue() {
         console.log(items.toString());
     }
 }
+
+var fila = new Queue();
+
+fila.enqueue('carlos')
+fila.enqueue('ana')
+fila.enqueue('lucas')
+
+fila.print();
