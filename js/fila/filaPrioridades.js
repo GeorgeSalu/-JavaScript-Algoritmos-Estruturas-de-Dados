@@ -33,3 +33,11 @@ function PriorityQueue() {
         }
     }
 }
+
+var pqueue = new PriorityQueue()
+
+pqueue.enqueue('carlos', 2)
+pqueue.enqueue('ana', 1)
+pqueue.enqueue('lucas', 1)
+
+pqueue.print()
