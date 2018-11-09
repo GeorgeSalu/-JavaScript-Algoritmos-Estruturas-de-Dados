@@ -9,8 +9,8 @@ function LinkedList() {
 
     this.append = function (element) {
         //adiciona um elemento no final da lista
-        var node = new Node(element);
-        current
+        var node = new Node(element),
+            current
 
         if (head === null) {
             head = node
@@ -68,3 +68,10 @@ function LinkedList() {
         console.log(this.toString());
     }
 }
+
+var ll = new LinkedList()
+ll.append('joao')
+ll.append('jose')
+ll.append('maria')
+
+ll.print();
