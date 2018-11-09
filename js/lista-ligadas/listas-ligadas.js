@@ -56,7 +56,7 @@ function LinkedList() {
             string = '';
 
         while (current) {
-            string += current.element + ''
+            string += current.element + ' '
             current = current.next
         }
 
