@@ -32,6 +32,25 @@ function LinkedList() {
 
     this.removeAt = function (position) {
         //remove o elemento de uma posicao especifica
+        if (position > -1 && position < length) {
+            var current = head,
+                previos,
+                index = 0
+
+            if (position === 0) {
+                head = current.next
+            } else {
+                while (index++ < position) {
+                    previos = current
+                    current = current.next
+                }
+                previos.next = current.next
+            }
+            length--
+            return current.element;
+        } else {
+            return null;
+        }
     }
 
     this.remove = function (element) {
