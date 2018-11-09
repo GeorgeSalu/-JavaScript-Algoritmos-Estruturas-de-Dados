@@ -9,6 +9,21 @@ function LinkedList() {
 
     this.append = function (element) {
         //adiciona um elemento no final da lista
+        var node = new Node(element);
+        current
+
+        if (head === null) {
+            head = node
+        } else {
+            current = head
+
+            while (current.next) {
+                current = current.next
+            }
+
+            current.next = node
+        }
+        length++
     }
 
     this.insert = function (position, element) {
@@ -36,10 +51,20 @@ function LinkedList() {
     }
 
     this.toString = function () {
-        //converte em string 
+        //converte em string
+        var current = head,
+            string = '';
+
+        while (current) {
+            string += current.element + ''
+            current = current.next
+        }
+
+        return string
     }
 
     this.print = function () {
         //imprime no console
+        console.log(this.toString());
     }
 }
