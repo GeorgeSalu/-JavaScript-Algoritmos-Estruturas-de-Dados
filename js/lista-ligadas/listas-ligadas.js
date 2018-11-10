@@ -28,6 +28,28 @@ function LinkedList() {
 
     this.insert = function (position, element) {
         //adiciona um elemento em uma posicao especifica
+        if (position >= 0 && position <= length) {
+            var node = new Node(element),
+                current = head,
+                previos,
+                index = 0;
+
+            if (position === 0) {
+                node.next = current
+                head = node
+            } else {
+                while (index++ < position) {
+                    previos = current
+                    current = current.next
+                }
+                node.next = current
+                previos.next = node
+            }
+            length++
+            return true
+        } else {
+            return false
+        }
     }
 
     this.removeAt = function (position) {
