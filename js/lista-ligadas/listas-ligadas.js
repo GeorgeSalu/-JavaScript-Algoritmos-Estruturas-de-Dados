@@ -98,10 +98,16 @@ function LinkedList() {
 
     this.isEmpty = function () {
         //retorna se esta vazia ou nao
+        return length === 0
     }
 
     this.size = function () {
         //retorna o tamanho da instancia
+        return length;
+    }
+
+    this.getHead = function () {
+        return head;
     }
 
     this.toString = function () {
