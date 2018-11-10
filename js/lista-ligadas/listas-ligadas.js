@@ -116,5 +116,8 @@ ll.append('jose')
 ll.append('maria')
 
 ll.print();
-
-console.log('foi removido ' + ll.removeAt(0))
+ll.insert(0, 'carlos')
+ll.print()
+ll.insert(2, 'Ana')
+ll.print()
+//console.log('foi removido ' + ll.removeAt(0))
