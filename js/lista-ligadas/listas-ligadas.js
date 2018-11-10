@@ -77,6 +77,8 @@ function LinkedList() {
 
     this.remove = function (element) {
         //remove o elemento element
+        var index = this.indexOf(element)
+        return this.removeAt(index)
     }
 
     this.indexOf = function (element) {
@@ -130,5 +132,8 @@ ll.print();
 ll.insert(0, 'carlos')
 ll.print()
 ll.insert(2, 'Ana')
+ll.print()
+
+console.log(ll.remove('joao'))
 ll.print()
 //console.log('foi removido ' + ll.removeAt(0))
