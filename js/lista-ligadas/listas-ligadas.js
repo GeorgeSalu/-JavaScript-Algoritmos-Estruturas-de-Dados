@@ -94,3 +94,5 @@ ll.append('jose')
 ll.append('maria')
 
 ll.print();
+
+console.log('foi removido ' + ll.removeAt(0))
