@@ -81,6 +81,17 @@ function LinkedList() {
 
     this.indexOf = function (element) {
         //retorna a posicao do elemento
+        var current = head,
+            index = 0;
+
+        while (current) {
+            if (element === current.element) {
+                return index;
+            }
+            index++
+            current = current.next
+        }
+        return - 1
     }
 
     this.isEmpty = function () {
