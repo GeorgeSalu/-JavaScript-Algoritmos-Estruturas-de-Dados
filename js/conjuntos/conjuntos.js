@@ -44,3 +44,15 @@ function Set() {
         return values
     }
 }
+
+var set = new Set()
+
+set.add(1)
+set.add(2)
+set.add(3)
+set.add(4)
+set.add(4)
+
+console.log(set.values())
+console.log(set.size())
+console.log(set.has(9))
