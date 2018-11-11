@@ -161,4 +161,6 @@ dll.append('joao');
 dll.append('jose');
 dll.append('maria');
 dll.insert(0, 'carlos');
+dll.removeAt(0)
+dll.removeAt(1)
 dll.print()
