@@ -33,10 +33,10 @@ function DoublyLinkedList() {
         if (position >= 0 && position <= length) {
             var node = new Node(element),
                 current = head,
-                previos,
+                previous,
                 index = 0
 
-            if (position = 0) {
+            if (position === 0) {
                 if (!head) {
                     head = node
                     tail = node
@@ -47,16 +47,18 @@ function DoublyLinkedList() {
                 }
             } else if (position === length) {
                 current = tail
+                console.log(current)
                 current.next = node
                 node.prev = current
                 tail = node
             } else {
                 while (index++ < position) {
-                    previos = current
+                    previous = current
                     current = current.next
                 }
                 node.next = current
-                previos.next = node
+                previous.next = node
+                current.prev = node
                 node.prev = previos
             }
             length++
@@ -123,3 +125,10 @@ function DoublyLinkedList() {
         console.log(this.toString());
     }
 }
+
+var dll = new DoublyLinkedList();
+dll.append('joao');
+dll.append('jose');
+dll.append('maria');
+dll.insert(0, 'carlos');
+dll.print()
