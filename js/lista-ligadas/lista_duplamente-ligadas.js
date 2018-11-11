@@ -30,7 +30,40 @@ function DoublyLinkedList() {
 
     this.insert = function (position, element) {
         //adiciona um elemento em uma posicao especifica
+        if (position >= 0 && position <= length) {
+            var node = new Node(element),
+                current = head,
+                previos,
+                index = 0
 
+            if (position = 0) {
+                if (!head) {
+                    head = node
+                    tail = node
+                } else {
+                    node.next = current
+                    current.prev = node
+                    head = node
+                }
+            } else if (position === length) {
+                current = tail
+                current.next = node
+                node.prev = current
+                tail = node
+            } else {
+                while (index++ < position) {
+                    previos = current
+                    current = current.next
+                }
+                node.next = current
+                previos.next = node
+                node.prev = previos
+            }
+            length++
+            return true
+        } else {
+            return false
+        }
     }
 
     this.removeAt = function (position) {
