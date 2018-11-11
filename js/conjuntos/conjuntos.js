@@ -46,7 +46,7 @@ function Set() {
 
     this.union = function (otherSet) {
         var unionSet = new Set(),
-            values = this.values
+            values = this.values()
 
         for (var i = 0; i < values.length; i++) {
             unionSet.add(values[i])
@@ -62,14 +62,18 @@ function Set() {
     }
 }
 
-var set = new Set()
+var setA = new Set()
 
-set.add(1)
-set.add(2)
-set.add(3)
-set.add(4)
-set.add(4)
+setA.add(1)
+setA.add(2)
+setA.add(3)
+setA.add(4)
+setA.add(4)
 
-console.log(set.values())
-console.log(set.size())
-console.log(set.has(9))
+var setB = new Set()
+setB.add(5)
+setB.add(6)
+setB.add(7)
+
+var unionAB = setA.union(setB)
+console.log(unionAB.values())
