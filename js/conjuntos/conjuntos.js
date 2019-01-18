@@ -99,5 +99,5 @@ setB.add(2)
 setB.add(3)
 setB.add(4)
 
-var intersectionAB = setA.intersection(setB)
-console.log(intersectionAB.values())
+var differenceAB = setA.difference(setB)
+console.log(differenceAB.values())
