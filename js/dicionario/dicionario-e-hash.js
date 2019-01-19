@@ -51,3 +51,11 @@ function Dictionary() {
         return values
     }
 }
+
+var dic = new Dictionary()
+
+dic.set('gandalf', 'gandalf@gmail.com')
+dic.set('john', 'john@gmail.com')
+dic.set('trion', 'trion@gmail.com')
+
+console.log(dic.has('john'))
