@@ -52,6 +52,28 @@ function Dictionary() {
     }
 }
 
+
+function HashTable() {
+    var table = []
+
+    this.put = function (key, value) {
+        //insere elemento
+    }
+
+    this.remove = function (key) {
+        //remove elemento
+    }
+
+    this.get = function (key) {
+        //retorna um valor
+    }
+
+    var losoloseHashCode = function (key) {
+        //retorna hash (valor numerico)
+    }
+}
+
+
 var dic = new Dictionary()
 
 dic.set('gandalf', 'gandalf@gmail.com')
