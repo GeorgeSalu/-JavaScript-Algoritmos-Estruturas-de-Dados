@@ -83,7 +83,7 @@ function HashTable() {
     }
 }
 
-
+/*
 var dic = new Dictionary()
 
 dic.set('gandalf', 'gandalf@gmail.com')
@@ -91,3 +91,9 @@ dic.set('john', 'john@gmail.com')
 dic.set('trion', 'trion@gmail.com')
 
 console.log(dic.has('john'))
+*/
+var hash = new HashTable()
+
+hash.put('gandalf', 'gandalf@gmail.com')
+hash.put('john', 'john@gmail.com')
+hash.put('trion', 'trion@gmail.com')
