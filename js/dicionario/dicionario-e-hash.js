@@ -246,9 +246,28 @@ function HashTable() {
     }
 
 
-    this.get = function (key) {
+    /*this.get = function (key) {
         //retorna um valor
         return table[loseloseHashCode(key)]
+    }*/
+    this.get = function (key) {
+        //retorna um valor
+        var position = loseloseHashCode(key)
+
+        if (table[position] !== undefined) {
+            var current = table[position].getHead()
+
+            while (current.next) {
+                if (current.element.key === key) {
+                    return current.element.value
+                }
+                current = current.next
+            }
+            if (current.element.key === key) {
+                return current.element.value
+            }
+        }
+        return undefined
     }
 
     var loseloseHashCode = function (key) {
