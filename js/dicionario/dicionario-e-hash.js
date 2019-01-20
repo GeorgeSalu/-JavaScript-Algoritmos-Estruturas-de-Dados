@@ -81,6 +81,14 @@ function HashTable() {
         }
         return hash % 37
     }
+
+    this.print = function () {
+        for (var i = 0; i < table.length; i++) {
+            if (table[i] !== undefined) {
+                console.log(i + ' : ' + table[i])
+            }
+        }
+    }
 }
 
 /*
@@ -97,3 +105,11 @@ var hash = new HashTable()
 hash.put('gandalf', 'gandalf@gmail.com')
 hash.put('john', 'john@gmail.com')
 hash.put('trion', 'trion@gmail.com')
+hash.put('aron', 'aron@gmail.com')
+hash.put('donie', 'donie@gmail.com')
+hash.put('jame', 'jame@gmail.com')
+hash.put('sue', 'sue@gmail.com')
+hash.put('mindi', 'mindi@gmail.com')
+hash.put('Paul', 'paul@gmail.com')
+hash.put('nathan', 'nathan@gmail.com')
+hash.put('tirion', 'tirion@gmail.com')
