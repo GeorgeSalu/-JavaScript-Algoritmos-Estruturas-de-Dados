@@ -310,3 +310,9 @@ hash.put('mindi', 'mindi@gmail.com')
 hash.put('Paul', 'paul@gmail.com')
 hash.put('nathan', 'nathan@gmail.com')
 hash.put('tirion', 'tirion@gmail.com')
+
+hash.print()
+
+console.log(hash.remove('MArcos'))
+console.log(hash.remove('john'))
+console.log(hash.remove('Paul'))
