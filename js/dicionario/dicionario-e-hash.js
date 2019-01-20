@@ -213,10 +213,38 @@ function HashTable() {
         table[position].append(new valuePair(key, value));
     }
 
-    this.remove = function (key) {
+    /*this.remove = function (key) {
         //remove elemento
         table[loseloseHashCode(key)] = undefined
+    }*/
+    this.remove = function (key) {
+        //remove elemento
+        var position = loseloseHashCode(key)
+
+        if (table[position] !== undefined) {
+            var current = table[position].getHead()
+
+            while (current.next) {
+                if (current.element.key === key) {
+                    table[position].remove(current.element)
+                    if (table[position].isEmpty()) {
+                        table[position] = undefined
+                    }
+                    return true
+                }
+                current = current.next
+            }
+            if (current.element.key === key) {
+                table[position].remove(current.element)
+                if (table[position].isEmpty()) {
+                    table[position] = undefined
+                }
+                return true
+            }
+        }
+        return false
     }
+
 
     this.get = function (key) {
         //retorna um valor
