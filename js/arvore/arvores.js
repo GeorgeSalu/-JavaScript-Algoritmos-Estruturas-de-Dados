@@ -122,8 +122,17 @@ function BinarySearchTree() {
         return null
     }
 
-    this.inOrderTraverse = function () {
+    this.inOrderTraverse = function (callback) {
         //visita todos os nos da arvore usando um percurso em ordem
+        inOrderTraverse(root, callback)
+    }
+
+    var inOrderTraverse = function (node, callback) {
+        if (node !== null) {
+            inOrderTraverseNode(node.left, callback)
+            callback(node.key)
+            inOrderTraverseNode(node.right, callback)
+        }
     }
 
     this.preOrderTraverse = function () {
