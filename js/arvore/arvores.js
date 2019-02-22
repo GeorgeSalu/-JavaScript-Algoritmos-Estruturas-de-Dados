@@ -109,6 +109,17 @@ function BinarySearchTree() {
 
     this.max = function () {
         //retorna a maior chave
+        return maxNode(root)
+    }
+
+    var maxNode = function (node) {
+        if (node) {
+            while (node && node.right !== null) {
+                node = node.right
+            }
+            return node.key
+        }
+        return null
     }
 
     this.inOrderTraverse = function () {
