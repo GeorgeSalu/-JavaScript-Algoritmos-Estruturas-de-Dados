@@ -33,7 +33,7 @@ function BinarySearchTree() {
         }
     }
 
-    this.search = function () {
+    this.search = function (key) {
         //busca uma chave
         return searchNode(root, key)
     }
