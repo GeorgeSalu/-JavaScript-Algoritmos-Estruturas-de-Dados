@@ -54,9 +54,12 @@ function Dictionary() {
 
 function Graph() {
 
+    var vertices = []
+    var adjList = new Dictionary()
+
     this.addVertex = function (v) {
-        var vertices = []
-        var adjList = new Dictionary()
+        vertices.push()
+        adjList.set(v, [])
     }
 
     this.addEdge = function (v, w) {
@@ -77,3 +80,22 @@ function Graph() {
         return s
     }
 }
+
+var graph = new Graph()
+var myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+for (var i = 0; i < myVertices.length; i++) {
+    graph.addVertex(myVertices[i])
+}
+
+graph.addEdge('A', 'B')
+graph.addEdge('A', 'C')
+graph.addEdge('A', 'D')
+graph.addEdge('C', 'D')
+graph.addEdge('C', 'D')
+graph.addEdge('D', 'G')
+graph.addEdge('D', 'G')
+graph.addEdge('D', 'H')
+graph.addEdge('B', 'E')
+graph.addEdge('B', 'F')
+
+console.log(graph.toString())
