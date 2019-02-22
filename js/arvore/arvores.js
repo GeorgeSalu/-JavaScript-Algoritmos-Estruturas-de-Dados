@@ -135,11 +135,29 @@ function BinarySearchTree() {
         }
     }
 
-    this.preOrderTraverse = function () {
-        //visita todos os nos da arvore usando um percurso pre ordem
+    this.preOrderTraverse = function (callback) {
+        //visita todos os nos da arvore usando um percurso em ordem
+        preOrderTraverse(root, callback)
     }
 
-    this.postOrderTraverse = function () {
-        //visita todos os nos da arvore usando um percurso pos ordem
+    var preOrderTraverse = function (node, callback) {
+        if (node !== null) {
+            callback(node.key)
+            preOrderTraverseNode(node.left, callback)
+            preOrderTraverseNode(node.right, callback)
+        }
+    }
+
+    this.postOrderTraverse = function (callback) {
+        //visita todos os nos da arvore usando um percurso em ordem
+        postOrderTraverse(root, callback)
+    }
+
+    var postOrderTraverse = function (node, callback) {
+        if (node !== null) {
+            postOrderTraverseNode(node.left, callback)
+            postOrderTraverseNode(node.right, callback)
+            callback(node.key)
+        }
     }
 }
