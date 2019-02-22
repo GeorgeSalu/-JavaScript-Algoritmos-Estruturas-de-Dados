@@ -143,6 +143,29 @@ function Graph() {
             callback(u)
         }
     }
+
+    this.dfs = function (callback) {
+        var color = initializeColor()
+        for (var i = 0; i < vertices.length; i++) {
+            if (color[vertices[i]] === 'white') {
+                dfsVisit(vertices[i], color, callback)
+            }
+        }
+    }
+
+    var dfsVisit = function (u, color, callback) {
+        color[u] = 'gray'
+        callback(u)
+
+        var neighbors = adjList.get(u)
+        for (var i = 0; i < neighbors.length; i++) {
+            var w = neighbors[i]
+            if (color[w] === 'white') {
+                dfsVisit(w, color, callback)
+            }
+        }
+        color[u] = 'black'
+    }
 }
 
 function printNode(value) {
